@@ -27,10 +27,22 @@ public String itrerateHandler(Model m) {
 	
 	List<String> list = List.of("Hi","by","chai","game");
 //	List<String> list = null;
-	
 	m.addAttribute("list",list);
 	
 	return "itreate";
 }
+
+@GetMapping("/condition")
+public String conditionHandler(Model m) {
+	m.addAttribute("isActive", false);
+	m.addAttribute("gender","M");
+	
+	List<Integer> list = List.of(1,2,3,4,5,6,7);
+	m.addAttribute("numList",list);
+	
+	return "condition";
+}
+
+
 
 }

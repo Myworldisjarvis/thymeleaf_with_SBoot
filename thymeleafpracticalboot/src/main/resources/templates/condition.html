@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>******* Conditional operators******</h1>
+
+	<!--******************************************** Conditional operators***********************************************-->
+
+	<!-- *************Elvis operator ( condition ? True : False ) -->
+	
+	<h1>*************Elvis operator**************</h1>
+	<h1>
+		User is <span th:style=" ${isActive} ? 'color:blue' : 'color:red' "
+			th:text=" ${isActive} ? 'ACTIVE' : 'NOT-ACTIVE' "></span>
+	</h1>
+
+
+	<!-- ************if and unless operator -->
+	<h1>*************if and unless operator**************</h1>
+	<h1 th:if="${gender}=='M'">Mail</h1>
+	<h1 th:unless="${gender}=='M'">Femail</h1>
+
+
+	<!-- ************ switch case operator -->
+	<h1>*************switch case operator**************</h1>
+	<div th:switch="${#lists.size(numList)}">
+		<h1 th:case="'0'">List contains 0 elements</h1>
+		<h1 th:case="'1'">List contains 1 elements</h1>
+		<h1 th:case="*">List contains more then one elements</h1>
+	</div>
+
+
+
+</body>
+</html>
