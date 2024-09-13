@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MyController {
 
+	
+//	handler for basic statements
 @RequestMapping(value = "/about", method = RequestMethod.GET)
 public String about(Model model) {
 	
@@ -22,6 +24,7 @@ public String about(Model model) {
 }
 	
 
+//handler for ( each loop ) statements
 @GetMapping("/example-loop")
 public String itrerateHandler(Model m) {
 	
@@ -32,6 +35,8 @@ public String itrerateHandler(Model m) {
 	return "itreate";
 }
 
+
+// handler for conditional statements 
 @GetMapping("/condition")
 public String conditionHandler(Model m) {
 	m.addAttribute("isActive", false);
@@ -43,6 +48,13 @@ public String conditionHandler(Model m) {
 	return "condition";
 }
 
+// handler for including fragments
+@GetMapping("/service")
+public String servicesHandler(Model m) {
+	
+	
+	return "services";
+}
 
 
 }
