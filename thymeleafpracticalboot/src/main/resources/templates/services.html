@@ -11,10 +11,13 @@
 	<!-- 	th:include , th:replace , th:insert -->
 	
 	
-	<footer th:include="footer::footer1">
+	<footer>
 	
+	<div th:replace="footer::footer1( ${title} , ${subtitle} )">
 	<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quisquam.</h1>
 	<p>Lorem ipsum dolor sit</p>
+	</div>
+	 
 	</footer>
 </body>
 </html>
