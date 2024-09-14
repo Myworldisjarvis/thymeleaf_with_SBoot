@@ -46,7 +46,7 @@ public class MyController {
 		return "condition";
 	}
 
-// handler for including fragments
+// handler for including fragments or dynamic vlaue
 	@GetMapping("/service")
 	public String servicesHandler(Model m) {
 
@@ -55,5 +55,11 @@ public class MyController {
 
 		return "services";
 	}
+// handler for fregment inheriting
+	@GetMapping("/aboutnew")
+	public String newAboutHandler(Model m) {
 
+		
+		return "aboutnew";
+	}
 }

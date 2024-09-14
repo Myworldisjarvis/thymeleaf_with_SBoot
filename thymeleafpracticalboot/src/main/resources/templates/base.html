@@ -1,0 +1,17 @@
+<!doctype html>
+<html id="gi" lang="en" xmlns:th="http://www.thymeleaf.org"
+	class="this" th:fragment="layout(contant)">
+<head>
+<meta charset="UTF-8" />
+<title>This is base page</title>
+<link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+	<h1>this is common header</h1>
+
+	<div th:replace="${contant}"></div>
+
+	<h1>this is common footer</h1>
+
+</body>
+</html>
