@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www,thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>CSS JS Image exaple</title>
+
+<link rel="stylesheet" th:href="@{/Css/mycss.css}" />
+</head>
+<body>
+	<div class="container">
+	
+		<img th:src="@{/Image/pic.jpg}" alt="hi" />	
+		<h1>Adding CSS , JS , Image in thymeleaf</h1>
+ 		<p id="id"></p>	
+	</div>
+
+
+
+<script th:src="@{/JS/myjs.js}"></script>
+</body>
+</html>
